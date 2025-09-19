@@ -937,7 +937,7 @@ async def txt_handler(bot: Client, m: Message):
         input1: Message = await bot.listen(editable.chat.id, timeout=20)
         raw_text0 = input1.text
         await input1.delete(True)
-  urlexcept asyncio.TimeoutError:
+    except asyncio.TimeoutError:
         raw_text0 = '/d'
     
     if raw_text0 == '/d':
